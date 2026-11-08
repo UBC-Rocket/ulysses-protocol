@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package ulysses;
+
+enum FlightState {
+  FLIGHT_STATE_UNSPECIFIED = 0;
+  FLIGHT_STATE_IDLE = 1;
+  FLIGHT_STATE_ESTOP = 2;
+  FLIGHT_STATE_ARMED = 3;
+  FLIGHT_STATE_ASCENT = 4;
+  FLIGHT_STATE_HOVER = 5;
+  FLIGHT_STATE_DESCENT = 6;
+}
+
+// Telemetry for the control algorithm and sensors
+message ControllerTelemetry {
+  uint32 timestamp_ms = 1;
+}
+
+// Telemetry for the flight controller management state
+message SystemTelemetry {
+  uint32 timestamp_ms = 1;
+  FlightState state = 2;
+}

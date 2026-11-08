@@ -2,4 +2,11 @@ syntax = "proto3";
 
 package ulysses;
 
-message Packet {}
+import "ulysses/telemetry.proto";
+
+message Packet {
+  oneof payload {
+    SystemTelemetry system_telemetry = 1;
+    ControllerTelemetry controller_telemetry = 2;
+  }
+}
