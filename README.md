@@ -1,2 +1,3 @@
-# ulysses-proto
-Protocol buffer definitions for Ulysses
+# Ulysses Radio Protocol
+
+Radio protocol buffer definitions for Ulysses.
